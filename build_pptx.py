@@ -157,8 +157,8 @@ def slide_1_hero():
     # 全幅深绿底
     add_rect(s, 0, 0, SLIDE_W, SLIDE_H, fill=SCH_GREEN_DARK)
     # 右上: 60 年数字大标
-    add_text(s, SLIDE_W - Inches(5.5), Inches(0.5), Inches(5), Inches(2.0),
-             "60", font=FONT_HEAD, size=180, bold=False, color=SCH_GREEN,
+    add_text(s, SLIDE_W - Inches(5.5), Inches(0.4), Inches(5), Inches(2.6),
+             "60", font=FONT_HEAD, size=160, bold=False, color=SCH_GREEN,
              align=PP_ALIGN.RIGHT)
     add_text(s, SLIDE_W - Inches(5.5), Inches(2.4), Inches(5), Inches(0.4),
              "YEARS  ·  1963 — 2024", font=FONT_MONO, size=14,
@@ -191,7 +191,7 @@ def slide_2_overview():
     s = prs.slides.add_slide(BLANK)
     # 白底
     add_rect(s, 0, 0, SLIDE_W, SLIDE_H, fill=PAPER)
-    page_chrome(s, 2, 12, kicker="OVERVIEW  ·  6 ACTS  ·  60 YEARS")
+    page_chrome(s, 2, 14, kicker="OVERVIEW  ·  6 ACTS  ·  60 YEARS")
     # 大标题
     add_text(s, MARGIN, Inches(1.1), Inches(8), Inches(0.5),
              "THE  FIELD  IN  SIX  ACTS",
@@ -252,13 +252,13 @@ def act_divider(act_nb, era, title, subtitle, keypoints, slide_idx, total=14, da
     add_line(s, MARGIN, Inches(0.72), SLIDE_W - MARGIN, Inches(0.72),
              color=SCH_GREEN, weight=Pt(1.0))
     # 巨大 act 编号
-    add_text(s, MARGIN, Inches(1.0), Inches(7), Inches(0.6),
-             act_nb, font=FONT_HEAD, size=200, color=SCH_GREEN, bold=False)
+    add_text(s, MARGIN, Inches(1.0), Inches(7), Inches(3.0),
+             act_nb, font=FONT_HEAD, size=180, color=SCH_GREEN, bold=False)
     # 时代
-    add_text(s, MARGIN, Inches(4.2), Inches(11), Inches(0.5),
+    add_text(s, MARGIN, Inches(4.4), Inches(11), Inches(0.5),
              era, font=FONT_MONO, size=14, color=fg)
     # 大标题
-    add_text(s, MARGIN, Inches(4.6), Inches(11), Inches(1.0),
+    add_text(s, MARGIN, Inches(4.8), Inches(11), Inches(1.0),
              title, font=FONT_HEAD, size=46, color=fg, bold=True)
     # 副标
     add_text(s, MARGIN, Inches(5.6), Inches(11), Inches(0.6),
@@ -625,8 +625,8 @@ def slide_14_closing(idx=14, total=14):
     add_line(s, MARGIN, Inches(0.72), SLIDE_W - MARGIN, Inches(0.72),
              color=SCH_GREEN, weight=Pt(1.0))
     # 顶部 60
-    add_text(s, SLIDE_W - Inches(3.5), Inches(0.9), Inches(3), Inches(2),
-             "60", font=FONT_HEAD, size=160, color=SCH_GREEN, bold=False,
+    add_text(s, SLIDE_W - Inches(3.5), Inches(0.8), Inches(3), Inches(2.4),
+             "60", font=FONT_HEAD, size=140, color=SCH_GREEN, bold=False,
              align=PP_ALIGN.RIGHT)
     add_text(s, SLIDE_W - Inches(3.5), Inches(2.7), Inches(3), Inches(0.4),
              "YEARS  ·  1963 — 2024", font=FONT_MONO, size=12,
@@ -650,8 +650,8 @@ def slide_14_closing(idx=14, total=14):
     base_y = Inches(4.0)
     for i, (nb, title, desc) in enumerate(rules):
         x = MARGIN + i * Inches(4.0)
-        add_text(s, x, base_y, Inches(3.6), Inches(0.4),
-                 nb, font=FONT_HEAD, size=40,
+        add_text(s, x, base_y, Inches(3.6), Inches(0.7),
+                 nb, font=FONT_HEAD, size=36,
                  color=SCH_GREEN if i == 2 else WHITE, bold=False)
         add_text(s, x, base_y + Inches(0.7), Inches(3.6), Inches(0.4),
                  title, font=FONT_HEAD, size=18, color=WHITE, bold=True)
